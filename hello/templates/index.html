@@ -15,34 +15,28 @@
   </div>
 </div>
 <div class="container">
-  <div class="alert alert-info text-center" role="alert">
-    To deploy your own copy, and learn the fundamentals of the Heroku platform, head over to the <a href="https://devcenter.heroku.com/articles/getting-started-with-python" class="alert-link">Getting Started with Python on Heroku</a> tutorial.
-  </div>
   <hr>
   <div class="row">
     <div class="col-md-6">
-      <h3><span class="glyphicon glyphicon-info-sign"></span> How this sample app works</h3>
+      <h3><span class="glyphicon glyphicon-info-sign"></span> How this app works</h3>
       <ul>
-        <li>This app was deployed to Heroku, either using Git or by using <a href="https://github.com/heroku/python-getting-started">Heroku Button</a> on the repository.</li>
-
-        <li>When Heroku received the source code, it grabbed all the dependencies in the <a href="https://github.com/heroku/python-getting-started/blob/master/requirements.txt">requirements.txt file</a>.</li>
-        <li>The platform then spins up a dyno, a lightweight container that provides an isolated environment in which the slug can be mounted and executed.</li>
-        <li>You can scale your app, manage it, and deploy over <a href="https://addons.heroku.com/">150 add-on services</a>, from the Dashboard or CLI.</li>
-        <li>Check out the <a href="https://devcenter.heroku.com/articles/getting-started-with-python">Getting Started</a> guide to learn more!</li>
-      </ul>
+        <li>This app was developed in Python and deployed to Heroku using <a href="https://github.com/colbytylerford/projectaccrobat">GitHub</a> as the repository.</li>
+        <li>ACCrobat takes TCGA .BED files and summarizes their data by pivoting and visualizing the information.</li>
+        <li>The output presented by this application can help us to understand the genetic differences of tumors from looking at various cell samples.</li>
+    </ul>
     </div>
     <div class="col-md-6">
       <h3><span class="glyphicon glyphicon-link"></span> Helpful Links</h3>
       <ul>
+        <li><a href="https://tcga-data.nci.nih.gov/tcga/">TCGA Data Portal</a></li>
         <li><a href="https://www.heroku.com/home">Heroku</a></li>
-        <li><a href="https://bioinformatics.uncc.edu/">Bioinformatics@UNCC</a></li>
         <li><a href="https://devcenter.heroku.com/articles/getting-started-with-python">Getting Started with Python on Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/django-app-configuration">Configuring Django Apps for Heroku</a></li>
-      </ul>
+        <li><a href="https://bioinformatics.uncc.edu/">Bioinformatics@UNCC</a></li>
+    </ul>
     </div>
   </div> <!-- row -->
    <div class="alert alert-info text-center" role="alert">
-    Please do work through the Getting Started guide, even if you do know how to build such an application.  The guide covers the basics of working with Heroku, and will familiarize you with all the concepts you need in order to build and deploy your own apps.
+   2016 Ford, Nodzak, Zhao - The Univerity of North Carolina at Charlotte
   </div>
 </div>
 {% endblock %}
