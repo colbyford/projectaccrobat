@@ -1,0 +1,49 @@
+.page-header {
+    background-color: #3276b4;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+.content {
+    margin-left: 40px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Helvetica';
+}
+
+.date {
+    color: #828282;
+}
+
+.save {
+    float: right;
+}
+
+.analysis-form textarea, .analysis-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu h2 a, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 20pt;
+    margin-right: 20px;
+}
+
+.analysis {
+    margin-bottom: 40px;
+    margin-left: 40px;
+}
+
+.analysis h1 a, .post h1 a:visited {
+    color: #000000;
+}
