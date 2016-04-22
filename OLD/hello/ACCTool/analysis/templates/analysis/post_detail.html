@@ -1,0 +1,16 @@
+{% extends 'analysis/base.html' %}
+
+{% block content %}
+    <div class="post">
+        {% if post.published_date %}
+            <div class="date">
+                <p>Run on: {{ post.published_date }} by {{post.author}}</p>
+            </div>
+        {% endif %}
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.description|linebreaks }}</p>
+        <!--<p><a href="../../{{ post.file }}"</a></p>-->
+        <p>{{ post.file.name }}</p>
+        <p>{{ post.output }}</p>
+    </div>
+{% endblock %}
