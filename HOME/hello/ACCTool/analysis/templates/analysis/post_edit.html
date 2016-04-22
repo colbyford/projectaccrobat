@@ -1,9 +1,0 @@
-{% extends 'analysis/base.html' %}
-
-{% block content %}
-    <h1>New Analysis</h1>
-    <form action = "." method="POST" enctype="multipart/form-data" class="post-form">{% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Analyze</button>
-    </form>
-{% endblock %}
