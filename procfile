@@ -1,1 +1,1 @@
-web: gunicorn ACCTool.wsgi
+web: gunicorn ACCTool.wsgi --log-file -
