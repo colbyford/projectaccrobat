@@ -10,6 +10,6 @@
         <h1>{{ post.title }}</h1>
         <p>{{ post.description|linebreaks }}</p>
         <p><a href="../../{{ post.file.url }}">{{ post.file }}</a></p>
-        <p><a href="../../{{ post.file.name }}_outputtemp.vcf">{{ post.output }}</a></p>
+        <p><a href="../../analysis/uploads/{{ post.output }}">{{ post.output }}</a></p>
     </div>
 {% endblock %}
