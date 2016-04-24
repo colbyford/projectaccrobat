@@ -7,8 +7,8 @@ class Post(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=50)
     description = models.CharField(max_length=500, null=True)
-    file = models.FileField(upload_to='uploads/')
-    output = models.CharField(max_length=100, null=True)
+    file = models.FileField(upload_to='.')
+    output = models.TextField(null=True)
     created_date = models.DateTimeField(
             default=timezone.now)
     published_date = models.DateTimeField(

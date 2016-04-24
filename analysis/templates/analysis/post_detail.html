@@ -9,8 +9,7 @@
         {% endif %}
         <h1>{{ post.title }}</h1>
         <p>{{ post.description|linebreaks }}</p>
-        <!--<p><a href="../../{{ post.file }}"</a></p>-->
-        <p>{{ post.file.name }}</p>
-        <p>{{ post.output }}</p>
+        <p><a href="../../{{ post.file.url }}">{{ post.file }}</a></p>
+        <p><a href="../../{{ post.file.name }}_outputtemp.vcf">{{ post.output }}</a></p>
     </div>
 {% endblock %}
