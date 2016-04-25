@@ -2,8 +2,12 @@ from django.utils import timezone
 from .models import Post
 from django.shortcuts import render, get_object_or_404, redirect
 from .forms import PostForm
+import os
 
-# Create your views here.
+def snpeff(file):
+	javastring = str("java -d64 -Xms512m -Xmx4g -jar snpEff/snpEff.jar GRCh37.75 analysis/uploads/" + file + '_output.vcf' + ' > ' + 'analysis/uploads/' + file + '_annotated.vcf')
+	output = os.system(javastring)
+	return(output)
 
 def maftovcf(file):
 	with open(file) as rawfile, open(file+'_outputtemp.vcf', 'a') as vcffile:	
@@ -25,13 +29,9 @@ def maftovcf(file):
 			if columns[8] == 'Missense_Mutation':
 				vcffile.write(vcff+'\n')
 		vcffile.close()
+		snpeff(file+'outputtemp.vcf') #call snpEff function
 	return(vcffile)
 
-
-def stringer(file):
-	with open(str(file)) as f :
-		output = f.readline()
-	return(output)
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now())
@@ -50,8 +50,12 @@ def post_new(request):
             post.author = request.user
             post.published_date = timezone.now()
             parse = maftovcf(post.file.url)
-            post.output = (str(post.file)+'_outputtemp.vcf')
+            post.vcfoutput = (str(post.file)+'_outputtemp.vcf')
+            post.snpeffvcfoutput = (str(post.vcfoutput)+'_annotated.vcf')
+            post.snpeffhtmloutput = (str(post.vcfoutput)+'_annotated.html')
+            post.snpeffhtmlmissenseoutput = (str(post.vcfoutput)+'_missense.html')
             post.save()
+            
 
             return redirect('post_detail', pk=post.pk)
     else:

@@ -9,7 +9,11 @@
         {% endif %}
         <h1>{{ post.title }}</h1>
         <p>{{ post.description|linebreaks }}</p>
-        <p><a href="../../{{ post.file.url }}">{{ post.file }}</a></p>
-        <p><a href="../../analysis/uploads/{{ post.output }}">{{ post.output }}</a></p>
+        <p>Uploaded File: <a href="../../{{ post.file.url }}">{{ post.file }}</a></p>
+        <p>Converted File: <a href="../../analysis/uploads/{{ post.vcfoutput }}">{{ post.vcfoutput }}</a></p>
+        <p>Annotations: <a href="../../analysis/uploads/{{ post.snpeffvcfoutput }}">{{ post.snpeffvcfoutput }}</a></p>
+        <p>Missense Mutation Results: <a target="_blank" href="../../analysis/uploads/{{ post.snpeffhtmlmissenseoutput }}">{{ post.snpeffhtmlmissenseoutput }}</a></p>
+        <p><iframe src="../../analysis/uploads/{{ post.snpeffhtmloutput }}" width="1050px" height="2500px" style="border:none"></iframe></p>
+        
     </div>
 {% endblock %}

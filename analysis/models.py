@@ -8,7 +8,10 @@ class Post(models.Model):
     title = models.CharField(max_length=50)
     description = models.CharField(max_length=500, null=True)
     file = models.FileField(upload_to='.')
-    output = models.TextField(null=True)
+    vcfoutput = models.CharField(max_length=500,null=True)
+    snpeffvcfoutput = models.CharField(max_length=500,null=True)
+    snpeffhtmloutput = models.CharField(max_length=500,null=True)
+    snpeffhtmlmissenseoutput = models.CharField(max_length=500,null=True)
     created_date = models.DateTimeField(
             default=timezone.now)
     published_date = models.DateTimeField(
